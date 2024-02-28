@@ -1,6 +1,4 @@
-// Описаний в документації
 import SimpleLightbox from 'simplelightbox';
-// Додатковий імпорт стилів
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const images = [
@@ -92,4 +90,4 @@ function makeGalleryMarkup(image) {
     .join('');
 }
 
-let lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250 });
+const lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250 });
