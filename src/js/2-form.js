@@ -21,12 +21,12 @@ function submitHandler(event) {
 
   if (data.email === '' || data.message === '') {
     alert('All form fields must be filled in');
+    return;
   } else {
     console.log(data);
+    form.reset();
+    localStorage.clear();
   }
-
-  localStorage.clear();
-  form.reset();
 }
 
 const rawData = localStorage.getItem(STORAGE_KEY);
