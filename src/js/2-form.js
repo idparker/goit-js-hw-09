@@ -19,15 +19,13 @@ function submitHandler(event) {
     message: event.target.message.value.trim(),
   };
 
-  if (event.target.email.value === '' || event.target.message.value === '') {
+  if (data.email === '' || data.message === '') {
     alert('All form fields must be filled in');
   } else {
     console.log(data);
   }
 
-  const jsonData = JSON.stringify(data);
-  localStorage.setItem(STORAGE_KEY, jsonData);
-
+  localStorage.clear();
   form.reset();
 }
 

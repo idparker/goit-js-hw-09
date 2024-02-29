@@ -79,9 +79,7 @@ function makeGalleryMarkup(image) {
                   <img
                       class="gallery-image"
                       src="${preview}"
-                      data-source="${original}"
                       alt="${description}"
-                      title="${description}"
                   />
               </a>
           </li>
@@ -90,4 +88,7 @@ function makeGalleryMarkup(image) {
     .join('');
 }
 
-const lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250 });
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionDelay: 250,
+  captionsData: 'alt',
+});
